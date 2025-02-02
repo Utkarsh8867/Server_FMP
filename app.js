@@ -21,7 +21,7 @@ dotenv.config();
 // Enable CORS
 app.use(
   cors({
-    origin: ["http://localhost:5173"], // Update with your frontend's origin if different
+    origin: ["https://farmer-market-placr.vercel.app"], // Update with your frontend's origin if different
     // origin: process.env.VITE_ALLOWED_ORIGIN, // Update with your frontend's origin if different
     credentials: true,
   })
