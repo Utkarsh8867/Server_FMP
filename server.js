@@ -27,10 +27,10 @@ cloudinary.config({
 
 
 // create server
-const server = app.listen(8000, () => {
+const server = app.listen(3000, () => {
   console.log(
     // `Server is running on http://localhost:${process.env.PORT}`
-    `Server is running on http://localhost:8000`
+    `Server is running on http://localhost:3000`
   );
 });
 
