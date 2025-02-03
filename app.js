@@ -19,13 +19,13 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Enable CORS
-app.use(
-  cors({
-    origin: ["https://farmer-market-placr.vercel.app"], // Update with your frontend's origin if different
-    // origin: process.env.VITE_ALLOWED_ORIGIN, // Update with your frontend's origin if different
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["https://farmer-market-placr.vercel.app"], // Update with your frontend's origin if different
+//     // origin: process.env.VITE_ALLOWED_ORIGIN, // Update with your frontend's origin if different
+//     credentials: true,
+//   })
+// );
 
 // Middleware
 app.use(express.json());
