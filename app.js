@@ -42,9 +42,9 @@ app.use("/test", (req, res) => {
 });
 
 // Environment variable configuration
-if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({ path: "config/.env" });
-}
+// if (process.env.NODE_ENV !== "PRODUCTION") {
+//   require("dotenv").config({ path: "config/.env" });
+// }
 
 // Import routes
 const user = require("./controller/user");
