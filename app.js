@@ -22,7 +22,7 @@ dotenv.config();
 app.use(
   cors({
     // origin: ["https://farmer-market-placr.vercel.app"], // Update with your frontend's origin if different
-     origin: ["https://thunderous-salmiakki-b27809.netlify.app/"], 
+     origin: ["https://client-s2tr.onrender.com"], 
     // origin: process.env.VITE_ALLOWED_ORIGIN, // Update with your frontend's origin if different
     credentials: true,
   })
