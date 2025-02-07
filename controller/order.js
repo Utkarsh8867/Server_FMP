@@ -339,4 +339,33 @@ router.get("/api/cart/:userId", async (req, res) => {
   }
 });
 
+
+
+router.get("/api/order/:orderId", async (req, res) => {
+  try {
+      const { orderId } = req.params;
+      
+      // Find the order by orderId
+      const order = await Order.findOne({ _id: orderId });
+
+      if (!order) {
+          return res.status(404).json({ success: false, message: "Order not found" });
+      }
+      
+      res.status(200).json({
+          success: true,
+          order: {
+              cart: order.cart,
+              shippingAddress: order.shippingAddress,
+              paymentInfo: order.paymentInfo,
+              paidAt: order.paidAt,
+              status: order.status,
+              userId: order.user.userId,
+              userName: order.user.name
+          }
+      });
+  } catch (error) {
+      res.status(500).json({ success: false, message: error.message });
+  }
+});
 module.exports = router;
