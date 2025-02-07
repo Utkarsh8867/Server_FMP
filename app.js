@@ -19,14 +19,35 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Enable CORS
+// app.use(
+//   cors({
+//     // origin: ["https://farmer-market-placr.vercel.app"], // Update with your frontend's origin if different
+//      origin: ["https://client-s2tr.onrender.com"], 
+//     // origin: process.env.VITE_ALLOWED_ORIGIN, // Update with your frontend's origin if different
+//     credentials: true,
+//   })
+// );
+
+
+
+const allowedOrigins = [
+  "https://67a6333838429600948f4e81--martfarmer.netlify.app",
+  "https://client-s2tr.onrender.com"
+];
+
 app.use(
   cors({
-    // origin: ["https://farmer-market-placr.vercel.app"], // Update with your frontend's origin if different
-     origin: ["https://client-s2tr.onrender.com"], 
-    // origin: process.env.VITE_ALLOWED_ORIGIN, // Update with your frontend's origin if different
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
+
 
 // Middleware
 app.use(express.json());
