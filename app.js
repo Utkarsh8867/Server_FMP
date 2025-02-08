@@ -32,7 +32,8 @@ dotenv.config();
 
 const allowedOrigins = [
   "https://martfarmer.netlify.app",
-  "https://client-s2tr.onrender.com"
+  "https://client-s2tr.onrender.com",
+  " http://localhost:5173"
 ];
 
 app.use(
