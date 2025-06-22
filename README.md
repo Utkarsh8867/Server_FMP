@@ -5,7 +5,7 @@ This repository contains the backend APIs for the **Farmers Market Platform (FMP
 ---
 
 ## 🌐 Live API Base URL
-https://server-fmp.onrender.com/api/v2/get-all-products
+https://server-fmp.onrender.com/api/v2/product/get-all-products
 
 ---
 
