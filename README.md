@@ -19,7 +19,7 @@ https://server-fmp.onrender.com/api/v2/product/get-all-products
 | `GET`       | `/get-grains`                                | Returns a list of all available **grains**.                  |
 | `GET`       | `/milk-products`                             | Returns a list of available **milk and dairy products**.     |
 
-> 🔐 *Note: Admin-specific APIs such as `/admin-all-products` are not listed here.*
+
 
 ---
 
