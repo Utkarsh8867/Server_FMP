@@ -36,4 +36,4 @@ https://server-fmp.onrender.com/api/v2/product/get-all-products
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/Utkarsh8867/Server_FMP.git
